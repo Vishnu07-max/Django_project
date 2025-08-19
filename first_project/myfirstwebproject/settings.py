@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -48,13 +49,16 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+ #C:\srmcem internship 2\Django_project\first_project\manage.py
+#C:\srmcem internship 2\Django_project\first_project\myfirstwebproject\
+TEMPLATES_DIR = BASE_DIR / 'myfirstwebproject' / 'templates'
 
 ROOT_URLCONF = 'myfirstwebproject.urls'
-
+TEMPLATES_DIR = BASE_DIR / 'myfirstwebproject' / 'templates'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],      
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
